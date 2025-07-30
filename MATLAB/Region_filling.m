@@ -1,0 +1,11 @@
+clc;
+clear all;
+close all;
+x = imread('brain.jpg');
+subplot(121);
+imshow(x);
+title('Original Image');
+y = imfill(x,'holes');
+subplot(122);
+imshow(y);
+title('Region Filling');

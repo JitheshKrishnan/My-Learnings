@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "596516629975",
+    "firebase_url": "https://vikings-6-default-rtdb.firebaseio.com",
+    "project_id": "vikings-6",
+    "storage_bucket": "vikings-6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:596516629975:android:b8a2824c42ef53e9ed2f92",
+        "android_client_info": {
+          "package_name": "com.example.qr_scanner"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANdgrKgpvXRCfgt-NDZJjJmeHEvR7sV2M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

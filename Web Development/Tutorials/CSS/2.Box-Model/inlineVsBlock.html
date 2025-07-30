@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inline vs Block Elements</title>
+    <style>
+      h2 {
+        color: white;
+        background-color: blue;
+        padding: 20px;
+        width: 580px;
+        height: 275px;
+        margin: 10px;
+        /* display: inline; */
+      }
+      span {
+        color: white;
+        background-color: purple;
+        height: 100px;
+        width: 200px;
+        padding-left: 40px;
+        padding-right: 40px;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima sequi
+      distinctio ipsum architecto libero aut. Laborum atque modi neque
+      voluptatibus eum sequi? Ex architecto beatae obcaecati dolores distinctio
+      exercitationem ad. Impedit autem consequuntur quae accusamus consequatur
+      tempora, ducimus, voluptates nobis assumenda eos vel voluptatum ipsam,
+      aliquid ea animi aspernatur reiciendis iusto eaque eligendi corrupti.
+      Exercitationem repellat minus blanditiis quibusdam repudiandae.
+    </h2>
+    <!-- ! Height and  Width cannot be set in inline elements using css height and width attributes so 'display' attribute is used to make it behave as a block level element -->
+    <span>This is a span - Inline element</span>
+  </body>
+</html>

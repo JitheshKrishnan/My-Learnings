@@ -1,0 +1,21 @@
+clc;
+clear all;
+close all;
+a=imread('mri.jpg');
+b=rgb2ntsc(a);
+subplot(221);
+imshow(b);
+title('NTSC IMAGE');
+c=rgb2hsv(a);
+subplot(222);
+imshow(c);
+title('HSV IMAGE');
+d=rgb2ycbcr(a);
+subplot(223);
+imshow(d);
+title('YCBCR IMAGE');
+e=imcomplement(a);
+subplot(224);
+imshow(e);
+title('COMPLEMENT');
+ 

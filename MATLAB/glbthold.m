@@ -1,0 +1,14 @@
+clc;
+clear all;
+close all;
+x = imread('mri.jpg');
+x = rgb2gray(x);
+x = imresize(x, [256, 256]);
+level = graythresh(x);
+g = imbinarize(x, level);
+subplot(211);
+imshow(x);
+title('input image');
+subplot(212);
+imshow(g);
+title('global thresholding');

@@ -1,0 +1,14 @@
+clc;
+clear all;
+close all;
+x = imread('mri.jpg');
+x = rgb2gray(x);
+x = imresize(x, [256, 256]);
+h = adaptthresh(x, 0.4);
+a = imbinarize(x, h);
+subplot(211);
+imshow(x);
+title('input image');
+subplot(212);
+imshow(a);
+title('adaptive thresholding');

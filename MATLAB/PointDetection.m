@@ -1,0 +1,18 @@
+clc;
+clear all;
+close all;
+x = imread('brain.jpg');
+x = rgb2gray(x);
+subplot(221);
+imshow(x)';
+title('grayscale image');
+t = 30;
+c=x>t;
+d = strel('disk', 4, 6);
+y = imopen(c,d);
+subplot(222);
+imshow(c);
+title('threshold');
+subplot(223);
+imshow(y);
+title('point detection');

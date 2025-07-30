@@ -1,0 +1,12 @@
+clc;
+clear all;
+close all;
+a = imread('brain.jpg');
+a = rgb2gray(a);
+b = watershed(a);
+subplot(211);
+imshow(a);
+title('input image');
+subplot(212);
+imshow(label2rgb(b));
+title('watershed');
