@@ -6,7 +6,7 @@ public class JDBC_Java {
     public static void main(String a[]) throws ClassNotFoundException, SQLException {
         String url = "jdbc:mysql://localhost:3306/aliens";
         String uname = "root";
-        String pass = "jithu2580";
+        String pass = "***";
         String query1 = "SELECT * FROM Student";
         String query2 = "INSERT INTO Student VALUES (4, 'VP')";
 

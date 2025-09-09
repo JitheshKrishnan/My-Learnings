@@ -67,14 +67,14 @@ public class SecurityConfig {
 //        UserDetails user1 = User
 //                .withDefaultPasswordEncoder()
 //                .username("Jithu")
-//                .password("jithu2580")
+//                .password("***")
 //                .roles("ADMIN")
 //                .build();
 //
 //        UserDetails user2 = User
 //                .withDefaultPasswordEncoder()
 //                .username("Naren")
-//                .password("7466")
+//                .password("***")
 //                .roles("USER")
 //                .build();
 //

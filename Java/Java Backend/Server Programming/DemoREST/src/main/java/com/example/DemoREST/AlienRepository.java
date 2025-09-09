@@ -16,7 +16,7 @@ public class AlienRepository {
 	public AlienRepository() {
 		String url = "jdbc:mysql://localhost:3306/aliens";
 		String username = "root";
-		String password = "jithu2580";
+		String password = "***";
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			con = DriverManager.getConnection(url, username, password);

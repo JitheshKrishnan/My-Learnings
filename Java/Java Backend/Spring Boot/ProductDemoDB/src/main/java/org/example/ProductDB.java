@@ -10,7 +10,7 @@ public class ProductDB {
 
     public ProductDB(){
         try {
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/productdemo", "root", "jithu2580");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/productdemo", "root", "***");
         } catch (Exception e) {
             System.out.println(e);
         }
