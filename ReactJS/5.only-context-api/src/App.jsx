@@ -1,34 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { createContext, useContext, useState } from 'react'
+import "./App.css"
 
-function App() {
-  const [count, setCount] = useState(0)
+//! Create a context to hold the count state and updater functions
+const CountContext = createContext();
 
+function CountProvider({children}){
+  const [count, setCount] = useState(0);
+  //! Function to increment the count
+  const increment = () => setCount(count+1);
+  //! Function to decrement the count
+  const decrement = () => setCount(count-1);
+
+  return(
+    <CountContext.Provider value={{count, increment, decrement}}>
+      {children}
+    </CountContext.Provider>
+  )
+}
+
+function useCount(){
+  const context = useContext(CountContext);
+  return context;
+}
+
+const Counter = ()=>{
+  const {count, increment, decrement} = useCount();
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className='counter-container'>
+      <h1>Counter: {count}</h1>
+      <button className='button' onClick={increment}>+</button>
+      <button className='button' onClick={decrement}>-</button>
+    </div>
+  )
+}
+const App = () => {
+  return (
+    <div className='app-container'>
+      <h1 className='title'>React Counter</h1>
+      <p className='sub-description'>A simple counter application using Context API</p>
+      <CountProvider>
+        <Counter></Counter>
+      </CountProvider>
+    </div>
   )
 }
 
