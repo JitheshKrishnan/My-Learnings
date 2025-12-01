@@ -1,5 +1,3 @@
-package Practice;
-
 class SearchingAlgorithms {
     public int linearSearch(int[] arr, int target) {
         for (int i = 0; i < arr.length; i++) {
@@ -29,17 +27,20 @@ class SearchingAlgorithms {
     }
 
     public int binarySearchRecursion(int[] arr, int target, int left, int right) {
-        while (left <= right) {
-            int mid = (left + right) / 2;
-            if (arr[mid] == target)
-                return mid;
-            else if (arr[mid] < target)
-                return binarySearchRecursion(arr, target, mid + 1, right);
-            else if (arr[mid] > target)
-                return binarySearchRecursion(arr, target, left, mid - 1);
+        if (left > right) {
+            System.out.println("Element not found!");
+            return -1;
         }
-        System.out.println("Element not found!");
-        return -1;
+
+        int mid = left + (right - left) / 2;
+
+        if (arr[mid] == target) {
+            return mid;
+        } else if (arr[mid] < target) {
+            return binarySearchRecursion(arr, target, mid + 1, right);
+        } else {
+            return binarySearchRecursion(arr, target, left, mid - 1);
+        }
     }
 }
 

@@ -24,36 +24,33 @@ public class Sorting {
         return arr;
     }
     public static int[] selectionSortMinValue(int arr[]){
-        int temp;
-        int min;
-        System.out.println("Selection Sort Minimum Value Method: ");
-        for(int i=0; i<arr.length; i++){
-            min=i;
-            for(int j=0+i; j<arr.length-1; j++){
-                if(arr[j+1]<arr[j]){
-                    min=j+1;
+        System.out.println("Selection Sort Minimum Value Method:");
+        for (int i = 0; i < arr.length - 1; i++) {
+            int min = i;
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[j] < arr[min]) {
+                    min = j;
                 }
             }
-            temp=arr[i];
-            arr[i]=arr[min];
-            arr[min]=temp;
+            int temp = arr[i];
+            arr[i] = arr[min];
+            arr[min] = temp;
         }
+
         return arr;
     }
     //{29,47,16,12,33}
-    public static int[] selectionSortMaxValue(int arr[]){
-        int temp;
-        System.out.println("Selection Sort Maximum Value Method: ");
-        for(int i=0; i<arr.length; i++){
-            int max=0;
-            for(int j=0; j<arr.length-1-i; j++){
-                if(arr[j+1]>arr[max]){
-                    max=j+1;
+    public static int[] selectionSortMaxValue(int arr[]) {
+        System.out.println("Selection Sort Maximum Value Method:");
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 1; j < arr.length - i; j++) {
+                if (arr[j] > arr[max]) {
+                    max = j;
                 }
             }
-            temp=arr[arr.length-1-i];
-            arr[arr.length-1-i]=arr[max];
-            arr[max]=temp;           
+            int temp = arr[arr.length - 1 - i];
+            arr[arr.length - 1 - i] = arr[max];
+            arr[max] = temp;
         }
         return arr;
     }
